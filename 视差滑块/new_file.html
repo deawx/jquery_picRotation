@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="a.css" />
+		<script src="a.js"></script>
+		<script src="b.js"></script>
+		<style>
+body {
+	_background-image: url(image/bg.jpg);
+	_background-attachment: fixed;
+} 
+.znsCom{
+	width:100%;
+	clear:both;
+	overflow:hidden;
+	position:fixed;
+	bottom:20px;
+	text-align:center;
+	color:#FFF;
+	font-family:Verdana;
+	_position: absolute;  
+	_top: expression(document.documentElement.clientHeight - document.getElementById('znsCom').offsetHeight - 20 + "px");
+	z-index:99999;
+}
+.znsCom a{
+	color:#FFF;
+	text-decoration:none;
+}
+</style>
+
+	</head>
+	<body>
+	<div class="wrapper">
+        <h1>人生处处是风景</h1>
+        <h2>你是别人的风景，却看湿了我的眼</h2>
+    </div>
+
+    <div id="pxs_container" class="pxs_container">
+        <div class="pxs_bg">
+            <div class="pxs_bg1"></div>
+            <div class="pxs_bg2"></div>
+            <div class="pxs_bg3"></div>
+        </div>
+        <div class="pxs_loading">Loading images...</div>
+        <div class="pxs_slider_wrapper">
+            <ul class="pxs_slider">
+                <li><img src="images/1.jpg" alt="First Image" /></li>
+                <li><img src="images/2.jpg" alt="Second Image" /></li>
+                <li><img src="images/3.jpg" alt="Third Image" /></li>
+                <li><img src="images/4.jpg" alt="Forth Image" /></li>
+                <li><img src="images/5.jpg" alt="Fifth Image" /></li>
+                <li><img src="images/6.jpg" alt="Sixth Image" /></li>
+            </ul>
+            <div class="pxs_navigation">
+                <span class="pxs_next"></span>
+                <span class="pxs_prev"></span>
+            </div>
+            <ul class="pxs_thumbnails">
+                <li><img src="images/thumbs/1.jpg" alt="First Image" /></li>
+                <li><img src="images/thumbs/2.jpg" alt="Second Image" /></li>
+                <li><img src="images/thumbs/3.jpg" alt="Third Image" /></li>
+                <li><img src="images/thumbs/4.jpg" alt="Forth Image" /></li>
+                <li><img src="images/thumbs/5.jpg" alt="Fifth Image" /></li>
+                <li><img src="images/thumbs/6.jpg" alt="Sixth Image" /></li>
+            </ul>
+        </div>
+    </div>
+
+     
+     
+    <script>
+		var oLoad = getByClass(document.body, 'pxs_loading')[0];
+		var oImgBox = getByClass(document.body,'pxs_slider_wrapper')[0];
+		//var oEvent=ev||event;
+		//var obj=oEvent.srcElement||oEvent.target;
+		var imgs = document.getElementsByTagName('img');
+		for(var i=0;i<imgs.length;i++)
+		{
+			imgs[i].onload = function()
+			{
+				oLoad.style.display = 'none';
+			}
+			oImgBox.style.display = 'block';
+		}
+		</script>    
+	</body>
+</html>

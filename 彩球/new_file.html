@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="a.css" />
+		<script src="a.js"></script>
+
+
+	</head>
+<body>
+<div id="ctrl_pad">
+	
+	<a class="btn" href="javascript:;" onclick="document.getElementById('ctrl_pad').style.display='none';document.getElementById('show_pad').style.display='block';">↑↑ 收缩</a>
+	<div id="info">
+		<em>可以在屏幕上随便拖拽鼠标，或者点击“自动移动”</em> - FPS:<span id="fps"></span>
+	</div>
+	<input id="auto_play" type="button" value="自动移动" />
+	
+</div>
+<a style="display:none;" id="show_pad" href="javascript:;" onclick="document.getElementById('ctrl_pad').style.display='block';document.getElementById('show_pad').style.display='none';">↓↓ 重新显示</a>
+<div id="bg">
+</div>
+<div id="loading">
+	loading...
+</div>
+</body>
+</html>
